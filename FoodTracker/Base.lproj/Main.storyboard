@@ -47,6 +47,7 @@
                                     <outlet property="nameLabel" destination="dz7-EE-mLb" id="r0s-gY-QkL"/>
                                     <outlet property="photoImageView" destination="iWs-rz-Tai" id="fpQ-n6-kVw"/>
                                     <outlet property="ratingControl" destination="2Bq-mX-GfU" id="81M-SJ-NXO"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="rNv-5a-MUy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMU-Bk-TM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310.14492753623193" y="14.732142857142856"/>
+            <point key="canvasLocation" x="343" y="-243"/>
         </scene>
         <!--New Meal-->
         <scene sceneID="tne-QT-ifu">
@@ -113,7 +114,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="yEn-gh-eOi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d4g-cm-ZPY"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d4g-cm-ZPY">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="FGb-Ha-tAq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="YYu-F3-7eX">
                             <connections>
                                 <segue destination="RCH-sa-WYB" kind="unwind" unwindAction="unwindToMealListWithSender:" id="KsW-FF-0Ov"/>
@@ -135,7 +140,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1952.1739130434785" y="120.53571428571428"/>
+            <point key="canvasLocation" x="1925" y="-243"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IjT-38-boI">
@@ -177,4 +182,7 @@
     <resources>
         <image name="defaultPhoto" width="150" height="150"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rNv-5a-MUy"/>
+    </inferredMetricsTieBreakers>
 </document>
